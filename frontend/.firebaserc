@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "furry-safe"
-  }
+    "default": "furry-safe",
+    "Deploymentz": "furry-safe-54b0e"
+  },
+  "targets": {},
+  "etags": {}
 }
