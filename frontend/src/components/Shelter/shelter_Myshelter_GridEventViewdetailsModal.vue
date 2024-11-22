@@ -231,7 +231,7 @@ let _event_id = ref(null)
 async function getUserDetails() {
     try {
     console.log("event modal 2", _user_id.value)
-        const response = await axios.post("http://localhost:5000/getusedetails", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getusedetails", {
             _id: _user_id.value
         });
 
@@ -250,7 +250,7 @@ async function retrieveReports() {
     try {
             console.log("eventssssssssssssssss") // Nov12
 
-        const response = await axios.post("http://localhost:5000/getevents", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getevents", {
             _event_id: _event_id.value
         });
 

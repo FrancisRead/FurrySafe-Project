@@ -234,7 +234,7 @@ let _user_id = ref(null)
 let userdetails = ref([])
 async function getUserDetails() {
     try {
-        const response = await axios.post("http://localhost:5000/getusedetails", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getusedetails", {
             _id: _user_id.value
         });
 
@@ -249,7 +249,7 @@ async function getUserDetails() {
 let posts = ref([])
 async function retrieveReports() {
     try {
-        const response = await axios.post("http://localhost:5000/getereports", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereports", {
             _user_id: _user_id
         });
 

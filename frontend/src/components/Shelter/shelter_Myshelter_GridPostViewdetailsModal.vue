@@ -64,7 +64,7 @@ async function getPetPostDetails() {
 
     try {
         console.log("_post_id", _post_id)
-        const response = await axios.post("http://localhost:5000/profile", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/profile", {
             _userid: _user_id,
             _petid: _pet_id,
             _post_id: _post_id

@@ -48,7 +48,7 @@ let selectedPostDetails = ref([])
 async function retrieveReports() {
     try {
         console.log("retrieveReports")
-        const response = await axios.post("http://localhost:5000/getereports", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereports", {
         });
 
         if (response.data && response.data.length > 0) {
@@ -64,7 +64,7 @@ let postsandevents = ref([])
 async function retrieveReportsandEvents() {
     try {
         console.log("retrieveReports")
-        const response = await axios.post("http://localhost:5000/getereportsandevents", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereportsandevents", {
         });
 
         if (response.data && response.data.length > 0) {

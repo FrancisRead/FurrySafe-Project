@@ -341,7 +341,7 @@ async function createNewPost() {
 
     console.log("Submitting event data:", Object.fromEntries(formData));
 
-    const response = await axios.post('http://localhost:5000/create-event', formData, {
+    const response = await axios.post('https://capstone-furry-safe-vl9o.onrender.com/create-event', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -382,7 +382,7 @@ async function modifyEventPost() {
 
     console.log("Submitting event data:", Object.fromEntries(formData));
 
-    const response = await axios.post('http://localhost:5000/modify-event', formData, {
+    const response = await axios.post('https://capstone-furry-safe-vl9o.onrender.com/modify-event', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

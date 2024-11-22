@@ -74,7 +74,7 @@ const profileUrl = ref(null); // Holds the image URL
 // profile
 async function loadProfileCard() {
     try {
-        const response = await axios.post("http://localhost:5000/edit_shelterprofile", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/edit_shelterprofile", {
             shelterid: id
         });
 
@@ -107,7 +107,7 @@ async function loadProfileDetails() {
     //const id = localStorage.getItem('c_id');
 
     try {
-        const response = await axios.post("http://localhost:5000/edit_shelterprofile", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/edit_shelterprofile", {
             shelterid: id
         });
 
@@ -161,7 +161,7 @@ let _user_id = userId;
 let posts = ref([])
 async function retrieveReports() {
     try {
-        const response = await axios.post("http://localhost:5000/getereports", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereports", {
             _user_id
         });
 
@@ -192,7 +192,7 @@ const petid = null;
 async function loadPetProfiles() {
     try {
         console.log("load pet details =)")
-        const response = await axios.post("http://localhost:5000/profile", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/profile", {
             _userid: userId,
             _petid: petid
         });
@@ -235,7 +235,7 @@ let events = ref([])
 let photos = ref([])
 async function retrieveEvents() {
     try {
-        const response = await axios.post("http://localhost:5000/getevents", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getevents", {
             _shelter_id: id
         });
 

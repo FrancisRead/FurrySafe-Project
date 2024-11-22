@@ -102,7 +102,7 @@ async function retrieveprogressReports() {
     console.log("retrieveReports in progress!!!")
 
     try {
-        const response = await axios.post("http://localhost:5000/getongoingoperations", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getongoingoperations", {
             _shelter_id: _user_id,
             _status: 'In progress'
         });
@@ -121,7 +121,7 @@ let rescuedReport = ref([])
 async function retrieveRescuedReports() {
     try {
         console.log("retrieveReports in rescueeeee")
-        const response = await axios.post("http://localhost:5000/getrescuedhistory", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getrescuedhistory", {
             _report_status: 'Rescued',
             _handled_by: _user_id
         });

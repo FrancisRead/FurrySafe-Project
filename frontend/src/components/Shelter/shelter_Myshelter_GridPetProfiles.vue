@@ -27,7 +27,7 @@ const toggleModalProfileViewDetails = (id) => {
 // let posts = ref([])
 // async function retrieveReports() {
 //     try {
-//         const response = await axios.post("http://localhost:5000/getereports", {
+//         const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereports", {
 //             _user_id: _user_id
 //         });
 
@@ -47,7 +47,7 @@ const petid = null;
 async function loadPetProfiles() {
     try {
         console.log("load pet details =)")
-        const response = await axios.post("http://localhost:5000/profile", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/profile", {
             _userid: userId,
             _petid: petid
         });
