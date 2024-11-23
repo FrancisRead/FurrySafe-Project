@@ -71,7 +71,7 @@ const toggleModalViewDetails = (id) => {
 
 async function getUserDetails() {
     try {
-        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getbuddydetails",
+        const response = await axios.post("http://localhost:5000/getbuddydetails",
             {
                 _id: _id
             }
@@ -79,7 +79,7 @@ async function getUserDetails() {
         if (response.data.success) {
             console.log(response.data.data)
             user.value = response.data.data[0]
-            console.log("user avatar", user.value) // Check to confirm values are set
+            console.log("user avatar", user.value.user_profile_url) // Check to confirm values are set
         }
     }
     catch (err) {
@@ -91,7 +91,7 @@ const buddyPosts = ref([])
 async function getBuddyPost() {
     try {
         console.log("id", _id)
-        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getbuddypost",
+        const response = await axios.post("http://localhost:5000/getbuddypost",
             {
                 _id: _id
             }
@@ -109,7 +109,7 @@ const petprofiles = ref([])
 const petid = null;
 async function getBuddyPets() {
     try {
-        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/profile", {
+        const response = await axios.post("http://localhost:5000/profile", {
             _userid: _id,
             _petid: petid
         });
@@ -145,7 +145,7 @@ function hasMultiplePhotos(photo_display_url) {
             <div class="bg-white p-6">
                 <div class="flex sm:flex-col md:flex-row justify-between gap-y-4 items-center mb-6 px-8">
                     <div class="flex sm:flex-col md:flex-row items-center gap-y-3 gap-x-3">
-                        <img :src="default_avatar || user.user_profile_url" alt=""
+                        <img :src="user.user_profile_url || default_avatar" alt=""
                             class="rounded-full border-2 w-32 h-32 object-cover" />
                         <div>
                             <h2 class="text-2xl font-bold">{{ user.firstname + ' ' + user.lastname }}</h2>
@@ -170,8 +170,8 @@ function hasMultiplePhotos(photo_display_url) {
                         <button @click="selectTab('Profile')" class="px-4 py-2"
                             :class="{ 'text-gray-900 border-b-2 border-gray-900': selectedTab === 'Profile' }">Pet
                             Profile</button>
-                        <button @click="selectTab('Badge')" class="px-4 py-2"
-                            :class="{ 'text-gray-900 border-b-2 border-gray-900': selectedTab === 'Badge' }">Badge</button>
+                        <!-- <button @click="selectTab('Badge')" class="px-4 py-2"
+                            :class="{ 'text-gray-900 border-b-2 border-gray-900': selectedTab === 'Badge' }">Badge</button> -->
                     </div>
                 </div>
 

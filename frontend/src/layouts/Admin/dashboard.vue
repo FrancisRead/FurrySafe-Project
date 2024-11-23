@@ -172,7 +172,7 @@
     async function logout(){
         try{
             //req to clear cookies 
-            console.log("email", this.userEmail)
+            console.log("email")
             const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/logout");
 
                  console.log(response)
@@ -193,7 +193,7 @@
         }
         catch(err){
             alert("An error occured when logging out")
-            console.log(err)
+            console.error(err.response || err);
         }
     }
 </script>
