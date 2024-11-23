@@ -61,7 +61,6 @@
                         class="w-full text-sm text-gray-700 py-[10px] px-5 outline-none transition" />
                     </div>
                   </div>
-
                   <div class="mt-1 border-t border-gray-200">
                     <label for="caption" class="sr-only">Event Caption</label>
                     <textarea v-model="caption" name="caption"

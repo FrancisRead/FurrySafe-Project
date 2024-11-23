@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { PencilIcon, UserIcon, Square2StackIcon, DocumentPlusIcon } from "@heroicons/vue/20/solid";
+import { PencilIcon, UserIcon, Square2StackIcon, PhoneIcon, DocumentPlusIcon } from "@heroicons/vue/20/solid";
 import axios from 'axios';
 import Linkfooter from '@/components/footerLink.vue'
 import viewpostdetials from '@/components/Buddy/buddy_Profile_GridReportViewdetailsModal.vue';
@@ -153,6 +153,13 @@ function hasMultiplePhotos(photo_display_url) {
                                 class="flex sm:justify-center md:justify-start items-center gap-x-2 text-gray-600 text-sm">
                                 <UserIcon class="h-4 w-4 text-gray-500" />
                                 <span class="font-medium">{{ user.gender }}</span>
+                            </div>
+                                <div
+                                class="flex sm:justify-center md:justify-start items-center gap-x-2 text-gray-600 text-sm">
+                                <PhoneIcon class="h-4 w-4 text-gray-500" />
+                                <span v-if="user.contact_number != null"
+                                    class="font-medium">{{ user.contact_number }}</span>
+                                <span v-else class="font-medium">No Contact available</span>
                             </div>
                         </div>
                     </div>

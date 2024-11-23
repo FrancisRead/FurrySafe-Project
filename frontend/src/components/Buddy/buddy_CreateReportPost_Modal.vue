@@ -435,12 +435,13 @@ onMounted(() => {
                   <div class="py-2 flex flex-col gap-y-2">
                     <div class="flex item-center gap-x-2">
                       <label for="location" class="text-base font-medium">Location</label>
+                      <label class="text-[12px] italic font-medium">( Pet Last Seen )</label>
                       <span class="text-red-400 text-[12px] italic" v-if="locationflag == false">
                         *Please add a location!</span>
                     </div>
                     <div class="flex gap-x-2">
                       <input id="location" placeholder="Enter your Location" v-model="selectedLocationAddress"
-                        class="w-full bg-transparent rounded-md border border-stroke dark:border-dark-3 py-[10px] px-5 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 disabled:border-gray-2" />
+                      class="w-full bg-transparent rounded-md border border-stroke dark:border-dark-3 py-[10px] px-5 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2 disabled:border-gray-2" />
                       <button @click.prevent="showMapModal = true, clearflags()">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="25" height="25">
                           <path fill="#f03d3d"
